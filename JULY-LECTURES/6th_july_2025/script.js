@@ -1,5 +1,9 @@
 // Fetch and promise
 
+const { default: axios } = require("axios");
+
+// import axios from "axios";
+
 // const API = "https://jsonplaceholder.typicode.com/todos"
 
 // fetch (API)
@@ -25,5 +29,27 @@
 // }
 // getData()
 
+
+// Axios
+//Axios with promise
+// const API = 'https://jsonplaceholder.typicode.com/todos'
+// axios.get(API)
+// .then((data) => {
+//     console.log(data)
+// })
+// .then((error) => {
+//     console.log(error)
+// })
+
+//Axios with async-await
+// const API3 = 'https://jsonplaceholder.typicode.com/todos';
+// async function fetchData(){
+//     const response = await axios.get(API3);
+//     const list = response.data;
+//     const userIds = list.map(item => item.userId);
+//     console.log(userIds);
+    
+// }
+// fetchData()
 
 
