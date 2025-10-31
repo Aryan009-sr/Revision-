@@ -227,3 +227,60 @@
 // console.log(100)
 // two()
 // console.log(111)
+
+
+// Instagram post feature using Async/Await
+function step1() {
+    console.log("Selecting the image...")
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Image selected")
+        }, 4000);
+    })
+}
+
+function step2(selectedImage) {
+    console.log("Adding filter to the selected Image...")
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Filter added to the Image.")
+        }, 2000);
+    });
+}
+
+function step3(filteredImage) {
+    console.log("Adding caption to the filtered Image...")
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Caption added to the Image.")
+        }, 5000);
+    })
+}
+
+function step4(CaptionedImage){
+    console.log("Image ready for uploading...")
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Image uploaded.")
+        }, 3000);
+    })
+}
+
+async function processImage(){
+    console.log("\n Starting Image processing using async/await");
+
+    //1. Select the image
+    const selectedImage = await step1();
+    console.log(`-Result: ${selectedImage}`)
+    //2. Add filter
+    const filteredImage = await step2(selectedImage)
+    console.log(`- Result : ${filteredImage}`)
+    //3. Add caption
+    const captionedImage = await step3(filteredImage)
+    console.log(`- Result : ${captionedImage}`)
+    //4. Upload Image
+    const finalImage = await step4(captionedImage)
+    console.log(`- Result : ${finalImage}`)
+
+}
+processImage();
