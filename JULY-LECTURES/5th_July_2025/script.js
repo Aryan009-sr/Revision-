@@ -175,6 +175,55 @@
 //     console.log(finalImage)
 // })
 
+//Stil this is the process of multiple chainings that require to chain lots of promises using .then function that could still potentially lead to nested hell in my opinion. To overcome this we have "Async/Await".
 
 
+//ASYNC-AWAIT
+//CALLBACK HELL ->  PROMISES  ->  ASYNC-AWAIT
+// Whenever we write async infront of a function, that function is always going to return a promise.
 
+// async function add(x,y){
+//     return x + y
+// }
+// console.log(add(4,5));
+// THe output will still be 9 but it would be returned as a promise, you can run the file in the browser and check it. So async/await always returns a promise.
+
+
+// Example: 1
+
+// function one(){
+//     console.log(1)
+//     let data = fetch('https://jsonplaceholder.typicode.com/todos')
+//     console.log(data)
+//     console.log(2)
+//     console.log(3)
+// }
+// one()
+// console.log(4);
+// console.log(5);
+
+// Example : 2
+// async function two(){
+//     console.log(6)
+//     console.log(7)
+//     let data1 = await fetch('https://jsonplaceholder.typicode.com/todos')
+//     console.log(data1)
+//     console.log(8)
+//     console.log(9)
+// }
+// console.log(10)
+// two()
+// console.log(11)
+
+//example : 3
+async function two(){
+    console.log(60)
+    console.log(70)
+    let data2 = await fetch('https://jsonplaceholder.typicode.com/todos/2')
+    console.log(data2)
+    console.log(80)
+    console.log(90)
+}
+console.log(100)
+two()
+console.log(111)
