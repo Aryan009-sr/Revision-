@@ -216,14 +216,14 @@
 // console.log(11)
 
 //example : 3
-async function two(){
-    console.log(60)
-    console.log(70)
-    let data2 = await fetch('https://jsonplaceholder.typicode.com/todos/2')
-    console.log(data2)
-    console.log(80)
-    console.log(90)
-}
-console.log(100)
-two()
-console.log(111)
+// async function two(){
+//     console.log(60)
+//     console.log(70)
+//     let data2 = await fetch('https://jsonplaceholder.typicode.com/todos/2')
+//     console.log(data2)
+//     console.log(80)
+//     console.log(90)
+// }
+// console.log(100)
+// two()
+// console.log(111)
