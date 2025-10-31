@@ -1,0 +1,180 @@
+// // Promises in Javascript
+
+// const { data } = require("react-router-dom");
+
+// // A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+// // It uses the new keywords: resolve, reject, then, catch, and finally.
+// // A Promise can be in one of three states: pending, fulfilled, or rejected.
+
+// // Promise is sort of constructor function that takes a function as an argument with two parameters: resolve and reject.
+
+// // Example of creating a Promise.
+// // let myPromise = new Promise((resolve, reject) => {
+// //     let success = true;
+// //     if(success) {
+// //         resolve("The operation was successful!");
+// //     }
+// //     else {
+// //         reject("The operation failed.");
+// //     }
+// // })
+// // //consuming the promise using then and catch
+// // myPromise.then((message) => {
+// //     console.log("Success: "  + message)
+// // }).catch((message) => {
+// //     console.log("Error: " + message) 
+// // }).finally(() => {
+// //     console.log("Promise has been handled.")
+// // })
+
+// //Example 2: Simulating a network request using Promises
+
+// // function fetchDataFromServer() {
+// //     return new Promise((resolve, reject) => {
+// //         setTimeout(() => {
+// //             const data = { userId: 1, username: "PrakharSingh"};
+// //             resolve(data)
+// //         }, 3000);
+// //     });
+// // }
+// // dataPromise = fetchDataFromServer();
+// // dataPromise.then((data) => {
+// //     console.log("Data fetched from server: ", data)
+// // }).catch((error) => {
+// //     console.log("Error fetching data: ", error)
+// // })
+
+
+// //Promises 
+// function step1() {
+//     console.log("Step 1: Starting the Process... selecting the image")
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Image Selected")
+//         }, 4000)
+//     })
+// }
+
+// function step2(selectedImage) {
+//     console.log("Step 2: Adding filter to the image")
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Filtered Image")
+//         }, 2000)
+//     })
+// }
+
+// function step3(filteredImage){
+//     console.log("Step 3: Adding caption to the image")
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("captioned Image")
+//         }, 3000);
+//     })
+// }
+
+// function step4(captionedImage) {
+//     console.log("Step 4: Uploading the image to the server")
+//     return new Promise((resolve, reject ) => {
+//         setTimeout(() => {
+//             resolve("Image uploaded successfully")
+//         }, 2000)
+//     })
+// }
+
+// step1()
+// .then((image) => {
+//     console.log(image)
+//     return step2(image)
+// })
+// .then((filteredImage) => {
+//     console.log(filteredImage)
+//     return step3(filteredImage)
+// })
+// .then((captionedImage) => {
+//     console.log(captionedImage)
+//     return step4(captionedImage)
+// })
+
+
+// let object1 = new Promise((resolve, reject) => {
+//     let info = "I will pay you"
+//     let err = "I won't pay you"
+//     // resolve(info)
+//     reject(err)
+// })
+// // console.log(object1)
+// object1
+// .then((message) => {
+//     console.log("Success: " + message)
+// })
+// .catch((message ) => {
+//     console.log("Error: " + message) 
+// })
+// .finally(() => {
+//     console.log("Promise has been handled.")
+// });
+
+
+// Creating an instagram post feature using Promises
+// step1: select image
+//step2 : addfilter
+//step3: add caption
+//step4: upload image
+
+// function step1() {
+//     console.log("Selecting the image...")
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Image selected")
+//         }, 4000);
+//     })
+// }
+
+// function step2(selectedImage) {
+//     console.log("Adding filter to the selected Image...")
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Filter added to the Image.")
+//         }, 2000);
+//     });
+// }
+
+// function step3(filteredImage) {
+//     console.log("Adding caption to the filtered Image...")
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Caption added to the Image.")
+//         }, 5000);
+//     })
+// }
+
+// function step4(CaptionedImage){
+//     console.log("Image ready for uploading...")
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Image uploaded.")
+//         }, 3000);
+//     })
+// }
+
+// step1()
+// .then((image) => {
+//     console.log(image)
+//     return step2(image)
+// })
+// .then((filteredImage) => {
+//     console.log(filteredImage)
+//     return step3(filteredImage)
+// })
+// .then((CaptionedImage) => {
+//     console.log(CaptionedImage) 
+//     return step4(CaptionedImage)
+// })
+// .then((finalImage) => {
+//     console.log(finalImage)
+// })
+
+
+
+
