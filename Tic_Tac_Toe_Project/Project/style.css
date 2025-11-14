@@ -23,3 +23,30 @@
     height: var(--cell-size);
     border: 1px solid black;
 }
+
+
+/*Removing the borders from the cells  */
+
+.cell:first-child,
+.cell:nth-of-type(2),
+.cell:nth-of-type(3){
+    border-top: none;
+}
+
+.cell:first-child,
+.cell:nth-of-type(4),
+.cell:nth-of-type(7){
+    border-left: none
+}
+
+.cell:nth-of-type(3),
+.cell:nth-of-type(6),
+.cell:nth-of-type(9){
+    border-right:none
+}
+
+.cell:nth-of-type(7),
+.cell:nth-of-type(8),
+.cell:nth-of-type(9){
+    border-bottom:none
+}
