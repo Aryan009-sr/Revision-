@@ -50,3 +50,8 @@
 .cell:nth-of-type(9){
     border-bottom:none
 }
+
+h1{
+    text-align:center;
+    font-size:30px;
+}
